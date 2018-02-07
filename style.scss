@@ -1,0 +1,71 @@
+$first-variableColor: blue;
+$second-variableColor: orange;
+$border-width: 4px;
+
+.checkClass{
+	color : $first-variableColor;
+}
+
+.extendCheckClass{
+	@extend .checkClass;
+	text-decoration: none;
+}
+
+.border-green{
+	border-color: green;
+	border-width: $border-width;
+}
+border-black{
+	border-color: black;
+	border-width: $border-width; 
+}
+
+// nested stylez
+a { font-family: tahoma; color:$first-variableColor; //& is the parent element(this)
+	&:hover,
+	&:focus,
+	&:active {color: $second-variableColor}
+	&.added-Second-Class{ color: yellow;
+		&:hover,
+		&:focus,
+		&:active {color: white;}
+	}
+}
+//sass calculationz
+
+$container : 1180px;
+
+.half {
+	height: $container / 2; //takez container value & dividez by 2
+}
+//sass function
+$padding: 25px;
+
+@function half-height($first, $second) { //can pass in variablez
+	@return $container / $first + $padding / $second;
+}
+
+.halfOther{
+	height : half-height(2,2);
+}
+
+//mixin example
+
+@mixin translateX($val){
+	-webkit-transform: translateX($val);
+	-moz-transform: translateX($val);
+	-ms-transform: translateX($val);
+	-o-transform: translateX($val);
+	transform: translateX($val);
+}
+
+//.translateX{
+	// -webkit-transform: translateX($val);
+	// -moz-transform: translateX($val);
+	// -ms-transform: translateX($val);
+	// -o-transform: translateX($val);
+	// transform: translateX($val);
+//}
+.translateX{
+	@include translateX(12px);
+}

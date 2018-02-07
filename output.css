@@ -1,0 +1,38 @@
+.checkClass, .extendCheckClass {
+  color: blue; }
+
+.extendCheckClass {
+  text-decoration: none; }
+
+.border-green {
+  border-color: green;
+  border-width: 4px; }
+
+border-black {
+  border-color: black;
+  border-width: 4px; }
+
+a {
+  font-family: tahoma;
+  color: blue; }
+  a:hover, a:focus, a:active {
+    color: orange; }
+  a.added-Second-Class {
+    color: yellow; }
+    a.added-Second-Class:hover, a.added-Second-Class:focus, a.added-Second-Class:active {
+      color: white; }
+
+.half {
+  height: 590px; }
+
+.halfOther {
+  height: 602.5px; }
+
+.translateX {
+  -webkit-transform: translateX(12px);
+  -moz-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  -o-transform: translateX(12px);
+  transform: translateX(12px); }
+
+/*# sourceMappingURL=output.css.map */
